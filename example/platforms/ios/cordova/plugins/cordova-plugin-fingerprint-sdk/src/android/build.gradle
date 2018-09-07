@@ -1,0 +1,7 @@
+repositories{
+ maven { url 'http://maven.getsimpl.com' }
+}
+
+dependencies {
+   compile('com.simpl.android:fingerprintSDK:1.0.13') 
+}

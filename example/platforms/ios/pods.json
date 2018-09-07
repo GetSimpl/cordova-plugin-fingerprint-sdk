@@ -1,0 +1,8 @@
+{
+    "SimplFingerPrint": {
+        "name": "SimplFingerPrint",
+        "type": "podspec",
+        "spec": "~> 1.0.1",
+        "count": 1
+    }
+}

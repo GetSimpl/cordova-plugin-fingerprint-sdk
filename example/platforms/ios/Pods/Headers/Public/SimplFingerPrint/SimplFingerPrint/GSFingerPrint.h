@@ -1,0 +1,1 @@
+../../../../SimplFingerPrint/SimplFingerPrint.framework/Headers/GSFingerPrint.h

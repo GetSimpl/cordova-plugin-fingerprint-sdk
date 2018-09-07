@@ -1,0 +1,16 @@
+PODS:
+  - SimplFingerPrint (1.0.1)
+
+DEPENDENCIES:
+  - SimplFingerPrint (~> 1.0.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SimplFingerPrint
+
+SPEC CHECKSUMS:
+  SimplFingerPrint: 16437911333547b21928737f2ac0da82c020dd49
+
+PODFILE CHECKSUM: 97edc85dea3b491f6e62f1b696ab09e77d1eeebc
+
+COCOAPODS: 1.5.2
