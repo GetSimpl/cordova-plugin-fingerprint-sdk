@@ -3,5 +3,5 @@ repositories{
 }
 
 dependencies {
-   compile('com.simpl.android:fingerprintSDK:1.0.13') 
+   compile('com.simpl.android:fingerprintSDK:1+')
 }
