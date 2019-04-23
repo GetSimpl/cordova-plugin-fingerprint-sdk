@@ -19,7 +19,7 @@
     @try {
         if(![self validParams:merchantId phoneNumber:phoneNumber email:email]) {
             CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
-            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId message:["An exception has occured"]];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
             return;
         }
         
@@ -28,7 +28,8 @@
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }];
     } @catch (NSException *exception) {
-        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId message:["An exception has occured"]];
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Something went wrong"];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
 }
 
