@@ -25,13 +25,19 @@ public class SimplFingerprintWrapper extends CordovaPlugin {
     }
 
     private void generateFingerprint(final String phoneNumber, final String email, final CallbackContext callbackContext) {
-        Context context=this.cordova.getActivity().getApplicationContext();
-        SimplFingerprint.init(context, phoneNumber, email);
-        SimplFingerprint.getInstance().generateFingerprint(new SimplFingerprintListener() {
+        try {
+            Context context=this.cordova.getActivity().getApplicationContext();
+            SimplFingerprint.init(context, phoneNumber, email);
+            SimplFingerprint.getInstance().generateFingerprint(new SimplFingerprintListener() {
             @Override
             public void fingerprintData(String payload) {
                 callbackContext.success(payload);
             }
         });
+        }catch(Exception e) {
+            JSONObject errorObj = new JSONObject();
+            errorObj.put("message", "" + e.getMessage());
+            callbackContext.error(errorObj);
+        }
     }
 }
